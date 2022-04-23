@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./forums-list.component.css']
 })
 export class ForumsListComponent implements OnInit {
-
+  forumsContent: forumsInput[] = [];
   constructor(
     private forumsService: ForumsService,
     private router: Router,
@@ -16,7 +16,17 @@ export class ForumsListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.forumsService = this.forumsService.getForumPost();
+    this.forumsContent = this.forumsService.getForumPosts();
+
+    this.forumsService.forumJokeChanged.subscribe((updatedContent)=>{
+      this.forumsContent = updatedContent;
+    })
+  }
+  onRemoveContent(idx:number){
+    this.forumsService.deletePostFromForum(idx);
   }
 
+  onAddNewContent(){
+    this.router.navigate(['new'],{ relativeTo: this.route})
+  }
 }

@@ -14,6 +14,8 @@ import { FavDadJokesComponent } from './favorites/fav-dad-jokes/fav-dad-jokes.co
 import { FavWholesomeComponent } from './favorites/fav-wholesome/fav-wholesome.component';
 import { ForumsComponent } from './forums/forums.component';
 import { ForumsListComponent } from './forums/forums-list/forums-list.component';
+import { ForumsDetailsComponent } from './forums/forums-details/forums-details.component';
+import { ContentComponent } from './sahred/content/content.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ForumsListComponent } from './forums/forums-list/forums-list.component'
     FavDadJokesComponent,
     FavWholesomeComponent,
     ForumsComponent,
-    ForumsListComponent
+    ForumsListComponent,
+    ForumsDetailsComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,

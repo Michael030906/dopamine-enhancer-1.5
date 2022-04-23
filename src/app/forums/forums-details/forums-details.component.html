@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <h3>{{ joke.content }}</h3>
+  </div>
+</div>
+<hr />
+<div class="row">
+  <div class="col-md-12">
+    <div class="dropdown" appDropdown>
+      <button
+        class="btn btn-primary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Edit Content
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" style="cursor: pointer" (click)="onEditJoke()"
+          >Update content</a
+        >
+        <a
+          class="dropdown-item"
+          style="cursor: pointer"
+          (click)="onDeleteJoke()"
+          >Delete Content</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

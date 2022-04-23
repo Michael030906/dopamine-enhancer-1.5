@@ -1,1 +1,17 @@
-<p>forums-list works!</p>
+<div class="row mb-3" *ngFor="let jokeEL of forumsContent; let i = index">
+  <div class="col-md-12">
+    <app-content [joke]="jokeEL.content" [jokeIdx]="i"></app-content>
+    <button
+      class="float-right"
+      style="border: none; font-size: 1rem"
+      (click)="onRemoveJoke(i)"
+    >
+      &minus;
+    </button>
+  </div>
+</div>
+
+<hr />
+<button class="button btn btn-primary" (click)="onAddNewContent()">
+  Add Post
+</button>

@@ -1,6 +1,12 @@
 export class forumsInput{
+id: number;
+content: string;
+
   constructor(
-    public id: number,
-    public joke: string
-  ){}
+   id: number,
+   content: string
+  ){
+    this.id = id;
+    this.content = content;
+  }
 }
