@@ -7,7 +7,7 @@ import { forumsInput } from 'src/app/forums/joke.model';
 })
 export class ContentComponent implements OnInit {
   @Input() jokeIdx: number;
-  @Input() joke:forumsInput = new forumsInput(0, "");
+  @Input() joke:string;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,18 @@
+.content {
+  display: flex;
+  flex-flow: column;
+  align-content: flex-end;
+
+
+
+}
+
+.add-btn{
+  padding-left: auto;
+
+}
+
+.btn-row{
+  display: flex;
+  justify-content: flex-end;
+}

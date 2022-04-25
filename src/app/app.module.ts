@@ -15,7 +15,8 @@ import { FavWholesomeComponent } from './favorites/fav-wholesome/fav-wholesome.c
 import { ForumsComponent } from './forums/forums.component';
 import { ForumsListComponent } from './forums/forums-list/forums-list.component';
 import { ForumsDetailsComponent } from './forums/forums-details/forums-details.component';
-import { ContentComponent } from './sahred/content/content.component';
+import { ContentComponent } from './shared/content/content.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ContentComponent } from './sahred/content/content.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

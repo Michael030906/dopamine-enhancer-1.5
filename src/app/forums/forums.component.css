@@ -1,0 +1,11 @@
+.content{
+  display: flexbox;
+  justify-content: center;
+  text-decoration: black;
+}
+.help{
+  display: flexbox;
+  justify-content: center;
+  text-decoration: black;
+
+}

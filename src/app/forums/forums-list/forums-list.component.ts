@@ -22,11 +22,12 @@ export class ForumsListComponent implements OnInit {
       this.forumsContent = updatedContent;
     })
   }
-  onRemoveContent(idx:number){
+  onRemoveJoke(idx:number){
     this.forumsService.deletePostFromForum(idx);
   }
 
   onAddNewContent(){
-    this.router.navigate(['new'],{ relativeTo: this.route})
+    this.router.navigate(['../',"new"],{ relativeTo: this.route})
+    console.log("hello")
   }
 }
