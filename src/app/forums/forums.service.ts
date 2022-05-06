@@ -10,9 +10,9 @@ export class ForumsService {
   forumJokeChanged = new EventEmitter();
 
   private forumJokes: forumsInput[] = [
-    new forumsInput(0,"Yo mama's so fat, when she fell I didn't laugh, but the sidewalk cracked up."),
-    new forumsInput(1,"Why do fathers take an extra pair of socks when they go golfing? In case they get a hole in one!"),
-    new forumsInput (2,"There's a squirrel named Twiggy who learned how to water-ski.")
+    new forumsInput("Yo mama's so fat, when she fell I didn't laugh, but the sidewalk cracked up.",0),
+    new forumsInput("Why do fathers take an extra pair of socks when they go golfing? In case they get a hole in one!",1),
+    new forumsInput ("There's a squirrel named Twiggy who learned how to water-ski.",2)
   ];
   //create forum post
   saveInputToForum(input: forumsInput){
@@ -36,6 +36,10 @@ export class ForumsService {
 
     this.forumJokes.splice(idx, 1);
     this.forumJokeChanged.emit(this.forumJokes.slice());
+  }
+  updateJoke(index: number, updatedJokeDetails: forumsInput) {
+    this.forumJokes[index] = updatedJokeDetails;
+    this.forumJokeChanged.next(this.forumJokes.slice());
   }
 
 }

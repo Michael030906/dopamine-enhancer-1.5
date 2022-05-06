@@ -19,6 +19,7 @@ const routes: Routes = [
 {path:'WholesomeFacts', component:WholesomeFactsComponent},
 {path:'Favorites', component:FavoritesComponent},
 
+
 ];
 
 @NgModule({

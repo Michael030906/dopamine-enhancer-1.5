@@ -1,0 +1,40 @@
+.nav-main{
+  background-color:#5D5C61;
+
+
+}
+
+.nav-title{
+  padding-top: 10px;
+  font-size: 25px;
+}
+p{
+  color:#0d85dd;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: space-evenly;
+  font-size: large;
+}
+
+.forums{
+  padding-left: 2rem;
+  padding-right: 2em;
+}
+
+.mom-jokes{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.dad-jokes{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.wFacts{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.favorites{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

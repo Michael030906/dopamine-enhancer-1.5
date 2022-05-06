@@ -1,4 +1,32 @@
 <div class="row">
+  <form
+    #jokeFormRef="ngForm"
+    (ngSubmit)="onJokeFormSubmit(jokeFormRef)"
+    class="test12"
+  >
+    <label for="jokeInput">What joke are you thinking about?</label>
+    <input
+      type="text"
+      class="form-control"
+      id="jokeInput"
+      name="jokeInput"
+      [ngModel]="joke.content"
+      #titleRef="ngModel"
+      required
+    />
+    <button
+      type="submit"
+      class="btn btn-primary mr-3"
+      [disabled]="!jokeFormRef.valid"
+    >
+      Upload Joke
+    </button>
+    <button type="button" class="btn btn- warning" (click)="onResetForm()">
+      Cancel
+    </button>
+  </form>
+</div>
+<div class="row">
   <h3 class="wtf">{{ joke.content }}</h3>
 </div>
 
