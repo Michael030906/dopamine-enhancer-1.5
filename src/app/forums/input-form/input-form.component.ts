@@ -11,14 +11,21 @@ import { forumsInput } from '../joke.model';
 })
 export class InputFormComponent implements OnInit {
   selectedInput: forumsInput;
+
   idx: number;
+
   joke:forumsInput;
+
   inputControl: FormControl = new FormControl('', Validators.required);
+
   @ViewChild('formInput') inputName;
+
   jokeDetails:forumsInput = {
     content: 'Enter Joke here',
   };
+
   isEditMode = false
+
   constructor(private forumsService: ForumsService,
 
     private router: Router,
@@ -62,7 +69,7 @@ export class InputFormComponent implements OnInit {
     }
 
     // Reset the form
-    // this.onResetForm();
+    this.onResetForm();
   }
 
   onResetForm() {
