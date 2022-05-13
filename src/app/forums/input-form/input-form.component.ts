@@ -1,19 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { forumsInput } from './joke.model';
-import { ForumsService } from './forums.service';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, NgControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
+import { ForumsService } from '../forums.service';
+import { forumsInput } from '../joke.model';
 
 @Component({
-  selector: 'app-forums',
-  templateUrl: './forums.component.html',
-  styleUrls: ['./forums.component.css']
+  selector: 'app-input-form',
+  templateUrl: './input-form.component.html',
+  styleUrls: ['./input-form.component.css']
 })
-export class ForumsComponent implements OnInit {
+export class InputFormComponent implements OnInit {
   selectedInput: forumsInput;
   idx: number;
-  joke: forumsInput;
-
+  joke:forumsInput;
+  inputControl: FormControl = new FormControl('', Validators.required);
+  @ViewChild('formInput') inputName;
   jokeDetails:forumsInput = {
     content: 'Enter Joke here',
   };
@@ -48,27 +49,25 @@ export class ForumsComponent implements OnInit {
     this.router.navigate(['/forums'])
   }
 
-  onJokeFormSubmit(formObj: NgForm){
-    const content = formObj.value
-
+  onJokeFormSubmit(content: string){
+    console.log(content)
     this.jokeDetails = new forumsInput(content)
 
     if (this.isEditMode == true) {
       // Edit existing book (using the bookDetails)
-      this.forumsService.updateJoke(this.idx, this.joke);
+      this.forumsService.updateJoke(this.idx, this.jokeDetails);
     } else {
       // Save a new book (using the bookDetails)
-      this.forumsService.saveInputToForum(this.joke);
+      this.forumsService.saveInputToForum(this.jokeDetails);
     }
 
     // Reset the form
-    this.onResetForm();
+    // this.onResetForm();
   }
 
   onResetForm() {
-    this.router.navigate(['../'], { relativeTo: this.route });
+    this.inputName.nativeElement.value = ' ';
   }
+
+
 }
-
-
-

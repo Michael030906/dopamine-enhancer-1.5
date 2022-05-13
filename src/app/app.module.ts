@@ -16,7 +16,8 @@ import { ForumsComponent } from './forums/forums.component';
 import { ForumsListComponent } from './forums/forums-list/forums-list.component';
 import { ForumsDetailsComponent } from './forums/forums-details/forums-details.component';
 import { ContentComponent } from './shared/content/content.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InputFormComponent } from './forums/input-form/input-form.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,14 @@ import { FormsModule } from '@angular/forms';
     ForumsComponent,
     ForumsListComponent,
     ForumsDetailsComponent,
-    ContentComponent
+    ContentComponent,
+    InputFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,11 @@
 <div class="container content">
   <div class="" *ngFor="let jokeEL of forumsContent; let i = index">
     <div class="col-md-12">
-      <app-content [joke]="jokeEL.content" [jokeIdx]="i"></app-content>
+      <app-content
+        class="jokes"
+        [joke]="jokeEL?.content"
+        [jokeIdx]="i"
+      ></app-content>
       <button
         class="float-right"
         style="border: none; font-size: 1rem; background-color: transparent"
