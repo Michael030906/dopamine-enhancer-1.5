@@ -1,4 +1,5 @@
 .content{
+  background-color: rgba(124, 85, 137, 0.528);
   display: flexbox;
   justify-content: center;
   text-decoration: black;
@@ -7,5 +8,6 @@
   display: flexbox;
   justify-content: center;
   text-decoration: black;
-
 }
+
+

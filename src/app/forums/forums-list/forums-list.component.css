@@ -19,3 +19,13 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.rmvBtn {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.row.rmvBtn{
+  background-color: red;
+}

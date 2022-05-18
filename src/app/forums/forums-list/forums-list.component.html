@@ -1,5 +1,5 @@
 <div class="container content">
-  <div class="" *ngFor="let jokeEL of forumsContent; let i = index">
+  <div class="row" *ngFor="let jokeEL of forumsContent; let i = index">
     <div class="col-md-12">
       <app-content
         class="jokes"
@@ -7,7 +7,7 @@
         [jokeIdx]="i"
       ></app-content>
       <button
-        class="float-right"
+        class="float-right rmvBtn"
         style="border: none; font-size: 1rem; background-color: transparent"
         (click)="onRemoveJoke(i)"
       >

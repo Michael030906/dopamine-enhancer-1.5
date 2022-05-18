@@ -1,5 +1,5 @@
 .nav-main{
-  background-color:#5D5C61;
+  background-color:#161716;
 
 
 }
@@ -9,32 +9,12 @@
   font-size: 25px;
 }
 p{
-  color:#0d85dd;
+  color:#87aa8f;
+  padding-top: 14.5px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   display: flex;
   align-items: space-evenly;
-  font-size: large;
+  font-size: 20px;
 }
 
-.forums{
-  padding-left: 2rem;
-  padding-right: 2em;
-}
 
-.mom-jokes{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.dad-jokes{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.wFacts{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.favorites{
-  padding-left: 2rem;
-  padding-right: 2rem;
-}

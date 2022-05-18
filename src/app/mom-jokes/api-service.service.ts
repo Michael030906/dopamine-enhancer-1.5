@@ -10,15 +10,9 @@ export class ApiServiceService {
 
   constructor(private http:HttpClient) { }
 
-  apiData(): Observable<{joke: string}>{
-    const httpHeaders = new HttpHeaders( {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Headers': ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
-      'content-type': 'application/json',
-    });
-    console.log(httpHeaders)
-    let jokeApi= "https://api.yomomma.info/"
-    return this.http.get<{joke: string}>(jokeApi, {headers: httpHeaders});
+  apiData(): Observable<any>{
+    let cn = "https://api.chucknorris.io/jokes/random"
+    return this.http.get<any>(cn);
   }
 
 }

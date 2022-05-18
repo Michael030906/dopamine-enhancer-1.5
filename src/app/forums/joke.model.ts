@@ -7,6 +7,7 @@ content: string;
     id?: number
 
   ){
+
     this.id = id;
     this.content = content;
   }
