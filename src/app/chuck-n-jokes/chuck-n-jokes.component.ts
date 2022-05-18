@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from './api-service.service';
+
 @Component({
-  selector: 'app-mom-jokes',
-  templateUrl: './mom-jokes.component.html',
-  styleUrls: ['./mom-jokes.component.css']
+  selector: 'app-chuck-n-jokes',
+  templateUrl: './chuck-n-jokes.component.html',
+  styleUrls: ['./chuck-n-jokes.component.css']
 })
-export class MomJokesComponent implements OnInit {
+export class ChuckNJokesComponent implements OnInit {
   jokeOutput: string;
 
   constructor(private apiService:ApiServiceService) { }
 
   ngOnInit(): void {
-   this.apiRandomCall()
+    this.apiRandomCall()
   }
 
   apiRandomCall(){

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
+import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { ForumsComponent } from './forums/forums.component';
 import { HomeComponent } from './home/home.component';
@@ -12,7 +12,7 @@ const routes: Routes = [
 {path:'home', component:HomeComponent},
 {path:'forums', component:ForumsComponent},
 {path:'MomJokes', component:MomJokesComponent},
-{path:'DadJokes', component:DadJokesComponent},
+{path:'chuck-norris-jokes', component:ChuckNJokesComponent},
 {path:'WholesomeFacts', component:WholesomeFactsComponent},
 {path:'Favorites', component:FavoritesComponent},
 
