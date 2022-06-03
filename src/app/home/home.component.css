@@ -1,0 +1,7 @@
+video{
+  border: 2px transparent;
+  box-shadow: 12px 8px 18px 5px rgba(0,0,0,0.6);
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}

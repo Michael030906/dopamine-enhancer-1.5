@@ -18,7 +18,6 @@ import { ForumsDetailsComponent } from './forums/forums-details/forums-details.c
 import { ContentComponent } from './shared/content/content.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputFormComponent } from './forums/input-form/input-form.component';
-import { ApiServiceService } from './mom-jokes/api-service.service';
 import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
 
 @NgModule({
@@ -46,7 +45,7 @@ import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ApiServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
