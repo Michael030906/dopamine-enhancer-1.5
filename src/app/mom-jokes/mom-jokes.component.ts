@@ -1,3 +1,4 @@
+import { sha1 } from '@angular/compiler/src/i18n/digest';
 import { Component, OnInit } from '@angular/core';
 import { JokeArrayService } from './joke-array.service';
 
@@ -10,45 +11,69 @@ export class MomJokesComponent implements OnInit {
   jokeOutput: string;
   selectedOption: number = 0;
   actions = [
-    {id:0, name:'Random'},
-    {id:1, name:'Fat'},
-    {id:2, name:'Stupid'},
-    {id:3, name:'Ugly'},
-    {id:4, name:'Nasty'},
-    {id:5, name:'Hairy'},
-    {id:6, name:'Bald'},
-    {id:7, name:'Old'},
-    {id:8, name:'Poor'},
-    {id:9, name:'Short'},
-    {id:10, name:'Skinny'},
-    {id:11, name:'Tall'},
-    {id:12, name:'Like'}
+    {id:0, name:'Fat'},
+    {id:1, name:'Stupid'},
+    {id:2, name:'Ugly'},
+    {id:3, name:'Nasty'},
+    {id:4, name:'Hairy'},
+    {id:5, name:'Bald'},
+    {id:6, name:'Old'},
+    {id:7, name:'Poor'},
+    {id:8, name:'Short'},
+    {id:9, name:'Skinny'},
+    {id:10, name:'Tall'},
+    {id:11, name:'Like'}
   ]
+
+  random = true;
+
+  fat = false;
+
+  stupid = false;
+
+  s1 = this.actions[this.selectedOption].name
+
+
+
   constructor(private jokeA: JokeArrayService) { }
 
   ngOnInit(): void {
    this.apiRandomCall()
+   console.log(this.s1)
+
+  }
+  // index(){
+  //   let help = this.s1
+  //   Math.floor(Math.random() * this.jokeA.array.help.length)
+
+  // }
+
+  // genApiCall(){
+  //   let help = this.s1
+  //   this.jokeOutput = this.jokeA.array.help[this.index]
+  // }
+  apiRandomCall(){
+    var indexR = Math.floor(Math.random() * this.jokeA.arrayUS.length)
+    this.jokeOutput = this.jokeA.arrayUS[indexR]
   }
 
-  apiRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.arrayUS.length)
-    this.jokeOutput = this.jokeA.arrayUS[index]
+
+
+  fatRandomCall():any{
+    var index = Math.floor(Math.random() * this.jokeA.array.Fat.length)
+    this.jokeOutput = this.jokeA.array.Fat[index]
   }
-  fatRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.fat.length)
-    this.jokeOutput = this.jokeA.array.fat[index]
-  }
-  stupidRandomCall(){
+  stupidRandomCall():any{
     var index = Math.floor(Math.random() * this.jokeA.array.stupid.length)
     this.jokeOutput = this.jokeA.array.stupid[index]
   }
   uglyRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.ugly.length)
-    this.jokeOutput = this.jokeA.array.ugly[index]
+   var index = Math.floor(Math.random() * this.jokeA.array.ugly.length)
+   this.jokeOutput = this.jokeA.array.ugly[index]
   }
   nastyRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.nasty.length)
-    this.jokeOutput = this.jokeA.array.nasty[index]
+   var index = Math.floor(Math.random() * this.jokeA.array.nasty.length)
+   this.jokeOutput = this.jokeA.array.nasty[index]
   }
   hairyRandomCall(){
     var index = Math.floor(Math.random() * this.jokeA.array.hairy.length)
@@ -82,4 +107,5 @@ export class MomJokesComponent implements OnInit {
     var index = Math.floor(Math.random() * this.jokeA.array.like.length)
     this.jokeOutput = this.jokeA.array.like[index]
   }
+
 }

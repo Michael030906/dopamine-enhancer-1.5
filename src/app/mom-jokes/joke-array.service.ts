@@ -731,7 +731,7 @@ export class JokeArrayService {
   ];
 
 
-   array:any = {"fat": [
+   array:any = {"Fat": [
     "Yo mama is so fat that her bellybutton gets home 15 minutes before she does.",
     "Yo mama is so fat that when she was diagnosed with a flesh-eating disease, the doctor gave her ten years to live.",
     "Yo mama is so fat that the National Weather Service names each one of her farts.",
@@ -996,7 +996,7 @@ export class JokeArrayService {
     "Yo mama's so fat, it doesn't matter that the Tardis is bigger on the inside. She can't get through the door.",
     "Yo mama is so fat that Thanos had to snap his fingers twice to make her disappear."
   ],
-  "stupid": [
+  "Stupid": [
     "Yo mama is so stupid that it took her 2 hours to watch 60 Minutes!",
     "Yo mama is so stupid that when your dad said it was chilly outside, she ran out the door with a spoon.",
     "Yo mama is so stupid that when she saw the \"Under 17 not admitted\" sign at a movie theatre, she went home and got 16 friends.",
@@ -1133,7 +1133,7 @@ export class JokeArrayService {
     "Yo mama so dumb, she lost a spelling bee to Hodor",
     "Yo Mama so dumb, she thought Bran Stark was a type of muffin."
   ],
-  "ugly": [
+  "Ugly": [
     "Yo mama is so ugly that when she went to a beautician it took 12 hours... to get a quote!",
     "Yo mama is so ugly that she looked out the window and got arrested for mooning.",
     "Yo mama is so ugly that people go as her for Halloween.",
@@ -1310,7 +1310,7 @@ export class JokeArrayService {
     "Yo mama's so ugly that you could put lipstick on a pig and it would look ten times better than her!",
     "Yo mama is so ugly, that Pythagoras wouldn't touch her with a 3-4-5 triangle."
   ],
-  "nasty": [
+  "Nasty": [
     "Yo mama is so nasty that she has more rappers in her than an iPod.",
     "Yo mama is so nasty that she makes speed stick slow down.",
     "Yo mama is so nasty that she brings crabs to the beach.",
@@ -1340,7 +1340,7 @@ export class JokeArrayService {
     "Yo mama's so nasty that the order of the phoenix was \"stay away from that woman!\"",
     "Yo mama's breath is so nasty that it chases away Miasma."
   ],
-  "hairy": [
+  "Hairy": [
     "Yo mama is so hairy that Bigfoot wants to take HER picture!",
     "Yo mama is so hairy that she looks like she has Buckwheat in a headlock.",
     "Yo mama is so hairy that you almost died of rugburn at birth!",
@@ -1366,7 +1366,7 @@ export class JokeArrayService {
     "Yo mama's so hairy and ugly that she got used as Ashitare's stunt double.",
     "Yo mama's so hairy that she has to go to Furfest to meet a man."
   ],
-  "bald": [
+  "Bald": [
     "Yo mama's so bald that I can tell fortunes on her head.",
     "Yo mama's so bald that you could draw a line down the middle of her head and it would look like my ass.",
     "Yo mama's so bald that when she goes to bed, her head slips off the pillow.",
@@ -1375,7 +1375,7 @@ export class JokeArrayService {
     "Yo mama is so bald that you can see what's on her mind.",
     "Yo mama is so bald that she took a shower and got brain-washed!"
   ],
-  "old": [
+  "Old": [
     "Yo mama is so old that they teach what she did in History Classes.",
     "Yo mama is so old that her birth certificate says \"expired\" on it.",
     "Yo mama is so old that that when she was in school there was no history class.",
@@ -1415,7 +1415,7 @@ export class JokeArrayService {
     "Yo mama is so old that she owes Jesus a dollar.",
     "Yo mama is so old that she ran track with dinosaurs."
   ],
-  "poor": [
+  "Poor": [
     "Yo mama is so poor that she was in K-Mart with a box of Hefty bags and when I asked her what she was doing she said, \"Buying luggage.\"",
     "Yo mama is so poor that when she goes to KFC, she has to lick other people's fingers!",
     "Yo mama is so poor that she went to McDonald's and put a milkshake on layaway.",
@@ -1468,7 +1468,7 @@ export class JokeArrayService {
     "Yo mama is so poor that when I saw her in the park digging up plants, she said she was \"getting groceries\".",
     "Yo mama is so poor that when I ring the doorbell I hear the toilet flush!"
   ],
-  "short": [
+  "Short": [
     "Yo mama is so short that you can see her feet on her drivers license!",
     "Yo mama is so short that she has to use a ladder to pick up a dime.",
     "Yo mama is so short that she does backflips under the bed.",
@@ -1489,7 +1489,7 @@ export class JokeArrayService {
     "Yo mama is so short that she can play handball on the curb.",
     "Yo mama's arms are so short that she has to tilt her head to scratch her ear."
   ],
-  "skinny": [
+  "Skinny": [
     "Yo mama is so skinny that she turned sideways and disappeared.",
     "Yo mama is so skinny that she hula hoops with a Cheerio.",
     "Yo mama is so skinny that she has to wear a belt with spandex.",
@@ -1517,7 +1517,7 @@ export class JokeArrayService {
     "Yo mama is so skinny that if she had dreads I'd grab her by the ankles and use her to mop the floor.",
     "Yo mama is so skinny that instead of calling her your parent, you call her transparent."
   ],
-  "tall": [
+  "Tall": [
     "Yo mama is so tall that she tripped in Michigan and bumped her head in Florida.",
     "Yo mama is so tall that she tripped over a rock and hit her head on the moon.",
     "Yo mama is so tall that if she did a back-flip she'd kick Jesus in the mouth.",
@@ -1527,7 +1527,7 @@ export class JokeArrayService {
     "Yo mama's so tall, she makes Shaquille O'Neal look like Gary Coleman.",
     "Yo mama's so tall, she did a push-up and burned her back on the sun."
   ],
-  "like": [
+  "Like": [
     "Yo mama is like a hockey player, she only showers after three periods.",
     "Yo mama is like a chicken coop, cocks fly in and out all day.",
     "Yo mama is like a paper towel, she picks up all kinds of slimy wet stuff.",
