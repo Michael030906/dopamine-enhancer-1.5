@@ -1,5 +1,7 @@
 import { sha1 } from '@angular/compiler/src/i18n/digest';
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Action } from 'rxjs/internal/scheduler/Action';
 import { JokeArrayService } from './joke-array.service';
 
 @Component({
@@ -9,8 +11,9 @@ import { JokeArrayService } from './joke-array.service';
 })
 export class MomJokesComponent implements OnInit {
   jokeOutput: string;
-  selectedOption: number = 0;
+
   actions = [
+    {id:-1, name:'Random'},
     {id:0, name:'Fat'},
     {id:1, name:'Stupid'},
     {id:2, name:'Ugly'},
@@ -25,87 +28,37 @@ export class MomJokesComponent implements OnInit {
     {id:11, name:'Like'}
   ]
 
-  random = true;
-
-  fat = false;
-
-  stupid = false;
-
-  s1 = this.actions[this.selectedOption].name
-
-
+  jokeTypeControl = new FormControl('');
+  jokeType: string = '';
 
   constructor(private jokeA: JokeArrayService) { }
 
   ngOnInit(): void {
-   this.apiRandomCall()
-   console.log(this.s1)
-
-  }
-  // index(){
-  //   let help = this.s1
-  //   Math.floor(Math.random() * this.jokeA.array.help.length)
-
-  // }
-
-  // genApiCall(){
-  //   let help = this.s1
-  //   this.jokeOutput = this.jokeA.array.help[this.index]
-  // }
-  apiRandomCall(){
-    var indexR = Math.floor(Math.random() * this.jokeA.arrayUS.length)
-    this.jokeOutput = this.jokeA.arrayUS[indexR]
+   this.genArryCall()
   }
 
+  genArryCall(): void {
+    if (this.jokeType === 'Random' || this.jokeType === '') {
+      var randomNum = Math.floor(Math.random() * (this.jokeA.arrayUS?.length + 1));
+      this.jokeOutput = this.jokeA.arrayUS[randomNum]
+    } else {
+      var array = this.jokeA.array[this.jokeType]
 
-
-  fatRandomCall():any{
-    var index = Math.floor(Math.random() * this.jokeA.array.Fat.length)
-    this.jokeOutput = this.jokeA.array.Fat[index]
-  }
-  stupidRandomCall():any{
-    var index = Math.floor(Math.random() * this.jokeA.array.stupid.length)
-    this.jokeOutput = this.jokeA.array.stupid[index]
-  }
-  uglyRandomCall(){
-   var index = Math.floor(Math.random() * this.jokeA.array.ugly.length)
-   this.jokeOutput = this.jokeA.array.ugly[index]
-  }
-  nastyRandomCall(){
-   var index = Math.floor(Math.random() * this.jokeA.array.nasty.length)
-   this.jokeOutput = this.jokeA.array.nasty[index]
-  }
-  hairyRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.hairy.length)
-    this.jokeOutput = this.jokeA.array.hairy[index]
-  }
-  baldRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.bald.length)
-    this.jokeOutput = this.jokeA.array.bald[index]
-  }
-  oldRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.old.length)
-    this.jokeOutput = this.jokeA.array.old[index]
-  }
-  poorRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.poor.length)
-    this.jokeOutput = this.jokeA.array.poor[index]
-  }
-  shortRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.short.length)
-    this.jokeOutput = this.jokeA.array.short[index]
-  }
-  skinnyRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.skinny.length)
-    this.jokeOutput = this.jokeA.array.skinny[index]
-  }
-  tallRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.stupid.length)
-    this.jokeOutput = this.jokeA.array.fat[index]
-  }
-  likeRandomCall(){
-    var index = Math.floor(Math.random() * this.jokeA.array.like.length)
-    this.jokeOutput = this.jokeA.array.like[index]
+      var randomNum = Math.floor(Math.random() * (array?.length + 1));
+      this.jokeOutput = array === undefined ? '' : array[randomNum]
+    }
   }
 
+  jokeTypeClick(action: string): void {
+    this.jokeType = action
+  }
+
+  dropdownLabel(): string {
+    if(this.jokeType === ''){
+      return 'Select a joke type';
+    }else{
+      return 'Joke Type Selected: ' + this.jokeType;
+    }
+    return '';
+  }
 }
