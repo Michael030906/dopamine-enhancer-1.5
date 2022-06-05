@@ -1,5 +1,6 @@
 <div class="container">
   <p>{{ jokeOutput }}</p>
+
   <button class="btn chuckBtn" (click)="genArryCall()">Get Chucked</button>
 
   <div class="dropdown">
@@ -12,6 +13,7 @@
     >
       {{ this.dropdownLabel() }}
     </button>
+
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
       <a
         *ngFor="let action of this.actions"

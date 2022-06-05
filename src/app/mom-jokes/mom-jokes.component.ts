@@ -1,7 +1,5 @@
-import { sha1 } from '@angular/compiler/src/i18n/digest';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Action } from 'rxjs/internal/scheduler/Action';
 import { JokeArrayService } from './joke-array.service';
 
 @Component({
@@ -29,12 +27,14 @@ export class MomJokesComponent implements OnInit {
   ]
 
   jokeTypeControl = new FormControl('');
+
   jokeType: string = '';
 
   constructor(private jokeA: JokeArrayService) { }
 
   ngOnInit(): void {
-   this.genArryCall()
+  this.jokeOutput = this.jokeA.arrayUS[248]
+   //this.genArryCall()
   }
 
   genArryCall(): void {
@@ -43,7 +43,6 @@ export class MomJokesComponent implements OnInit {
       this.jokeOutput = this.jokeA.arrayUS[randomNum]
     } else {
       var array = this.jokeA.array[this.jokeType]
-
       var randomNum = Math.floor(Math.random() * (array?.length + 1));
       this.jokeOutput = array === undefined ? '' : array[randomNum]
     }
