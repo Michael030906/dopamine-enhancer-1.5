@@ -5,10 +5,40 @@ import { MomJokesComponent } from '../mom-jokes/mom-jokes.component';
   providedIn: 'root'
 })
 export class FavoritesArrayService {
-  mainArry = [];
+  mainArry:any =new Array();
 
- saveInput(input){
-   this.mainArry.push(input)
- }
+  storedArrySet = localStorage.setItem("mainArray", JSON.stringify(this.mainArry))
+
+  storedArryGet = JSON.parse(localStorage.getItem("mainArray"))
+
+
+
+  saveInput(idx) {
+    if (this.mainArry.length === 0) {
+      this.storedArrySet
+      this.storedArryGet
+      this.mainArry.push(idx);
+    }
+    let clear = true;
+    this.mainArry.forEach((i) => {
+      if (i === idx) {
+        clear = false;
+      }
+    });
+    if (clear) {
+      this.storedArrySet
+      this.storedArryGet
+      this.mainArry.push(idx);
+    } else {
+       console.log('You already liked that Joke!')
+    }
+    return;
+  }
   constructor() { }
+
+  deletePostFromForum(idx:number){
+    if (idx === -1) return;
+
+    this.mainArry.splice(idx, 1);
+  }
 }

@@ -1,1 +1,6 @@
-<p>favorites works!</p>
+<div class="container">
+  <div class="row" *ngFor="let fav of txtOutput; let i = index">
+    <p>{{ fav }}</p>
+    <button (click)="onRemove(i)">X</button>
+  </div>
+</div>

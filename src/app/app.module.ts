@@ -8,8 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MomJokesComponent } from './mom-jokes/mom-jokes.component';
 import { HomeComponent } from './home/home.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { FavDadJokesComponent} from './favorites/fav-dad-jokes/fav-dad-jokes.component';
 import { FavMomJokesComponent } from './favorites/fav-mom-jokes/fav-mom-jokes.component';
-import { FavDadJokesComponent } from './favorites/fav-dad-jokes/fav-dad-jokes.component';
 import { FavWholesomeComponent } from './favorites/fav-wholesome/fav-wholesome.component';
 import { ForumsComponent } from './forums/forums.component';
 import { ForumsListComponent } from './forums/forums-list/forums-list.component';
@@ -20,6 +20,7 @@ import { InputFormComponent } from './forums/input-form/input-form.component';
 import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
 import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,16 +28,15 @@ import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
     MomJokesComponent,
     HomeComponent,
     FavoritesComponent,
-    FavMomJokesComponent,
     FavDadJokesComponent,
+    FavMomJokesComponent,
     FavWholesomeComponent,
     ForumsComponent,
     ForumsListComponent,
     ForumsDetailsComponent,
     ContentComponent,
     InputFormComponent,
-    ChuckNJokesComponent,
-    DadJokesComponent,
+    ChuckNJokesComponent
   ],
   imports: [
     BrowserModule,
