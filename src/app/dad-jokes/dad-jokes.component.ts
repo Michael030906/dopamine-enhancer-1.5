@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FavoritesArrayService } from '../shared/favorites-array.service';
 import { DadApiService } from './dad-api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { DadApiService } from './dad-api.service';
 })
 export class DadJokesComponent implements OnInit {
 jokeOutput:string;
-  constructor(private apiService:DadApiService) { }
+  constructor(private apiService:DadApiService, private favArry: FavoritesArrayService) { }
 
   ngOnInit(): void {
     this.apiRandomCall()
@@ -20,6 +21,11 @@ jokeOutput:string;
         this.jokeOutput = txt.joke
       }
     )
+  }
+
+  saveToArry(){
+    let idx = this.jokeOutput
+    this.favArry.saveInput(idx)
   }
 
 }

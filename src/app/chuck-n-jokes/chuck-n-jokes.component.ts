@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FavoritesArrayService } from '../shared/favorites-array.service';
 import { ApiServiceService } from './api-service.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { ApiServiceService } from './api-service.service';
 export class ChuckNJokesComponent implements OnInit {
   jokeOutput: string;
 
-  constructor(private apiService:ApiServiceService) { }
+  constructor(private apiService:ApiServiceService, private favArry:FavoritesArrayService) { }
 
   ngOnInit(): void {
     this.apiRandomCall()
@@ -21,5 +22,11 @@ export class ChuckNJokesComponent implements OnInit {
         this.jokeOutput = txt.value
       }
     )
+  }
+
+
+  saveToArry(){
+    let idx = this.jokeOutput
+    this.favArry.saveInput(idx)
   }
 }

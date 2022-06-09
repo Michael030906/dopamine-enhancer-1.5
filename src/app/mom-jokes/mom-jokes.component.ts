@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { FavoritesArrayService } from '../shared/favorites-array.service';
 import { JokeArrayService } from './joke-array.service';
 
 @Component({
@@ -30,7 +31,7 @@ export class MomJokesComponent implements OnInit {
 
   jokeType: string = '';
 
-  constructor(private jokeA: JokeArrayService) { }
+  constructor(private jokeA: JokeArrayService, private favArry:FavoritesArrayService) { }
 
   ngOnInit(): void {
   // this.jokeOutput = this.jokeA.arrayUS[248]
@@ -41,6 +42,7 @@ export class MomJokesComponent implements OnInit {
     if (this.jokeType === 'Random' || this.jokeType === '') {
       var randomNum = Math.floor(Math.random() * (this.jokeA.arrayUS?.length + 1));
       this.jokeOutput = this.jokeA.arrayUS[randomNum]
+      console.log(this.favArry.mainArry)
     } else {
       var array = this.jokeA.array[this.jokeType]
       var randomNum = Math.floor(Math.random() * (array?.length + 1));
@@ -59,5 +61,10 @@ export class MomJokesComponent implements OnInit {
       return 'Joke Type Selected: ' + this.jokeType;
     }
     return '';
+  }
+
+  saveToArry(){
+    let idx = this.jokeOutput
+    this.favArry.saveInput(idx)
   }
 }

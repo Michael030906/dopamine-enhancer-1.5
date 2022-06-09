@@ -1,6 +1,9 @@
 <div class="container">
   <div class="chuckJ">
-    <p>{{ jokeOutput }}</p>
+    <div class="row">
+      <p>{{ jokeOutput }}</p>
+      <button (click)="saveToArry()">X</button>
+    </div>
   </div>
   <button class="btn chuckBtn" (click)="apiRandomCall()">Get Chucked</button>
 </div>
