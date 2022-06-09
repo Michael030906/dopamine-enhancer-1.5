@@ -33,8 +33,8 @@ export class MomJokesComponent implements OnInit {
   constructor(private jokeA: JokeArrayService) { }
 
   ngOnInit(): void {
-  this.jokeOutput = this.jokeA.arrayUS[248]
-   //this.genArryCall()
+  // this.jokeOutput = this.jokeA.arrayUS[248]
+   this.genArryCall()
   }
 
   genArryCall(): void {

@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MomJokesComponent } from './mom-jokes/mom-jokes.component';
 import { HomeComponent } from './home/home.component';
-import { WholesomeFactsComponent } from './wholesome-facts/wholesome-facts.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { FavMomJokesComponent } from './favorites/fav-mom-jokes/fav-mom-jokes.component';
 import { FavDadJokesComponent } from './favorites/fav-dad-jokes/fav-dad-jokes.component';
@@ -19,6 +18,7 @@ import { ContentComponent } from './shared/content/content.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputFormComponent } from './forums/input-form/input-form.component';
 import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
+import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,6 @@ import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
     NavbarComponent,
     MomJokesComponent,
     HomeComponent,
-    WholesomeFactsComponent,
     FavoritesComponent,
     FavMomJokesComponent,
     FavDadJokesComponent,
@@ -37,6 +36,7 @@ import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
     ContentComponent,
     InputFormComponent,
     ChuckNJokesComponent,
+    DadJokesComponent,
   ],
   imports: [
     BrowserModule,

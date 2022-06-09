@@ -13,5 +13,4 @@ export class ApiServiceService {
       let cn = "https://api.chucknorris.io/jokes/random"
       return this.http.get<any>(cn);
       }
-
 }
