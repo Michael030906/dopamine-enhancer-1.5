@@ -12,10 +12,13 @@ export class FavoritesComponent implements OnInit {
 
   ngOnInit(): void {
     this.arryCall()
+    this.txtOutput = JSON.parse(localStorage.getItem("mainArray"))
+    console.log(this.txtOutput)
   }
 
   arryCall(){
     this.txtOutput = this.favList.mainArry
+    this.favList.storedArrySet
     console.log(this.txtOutput)
   }
 

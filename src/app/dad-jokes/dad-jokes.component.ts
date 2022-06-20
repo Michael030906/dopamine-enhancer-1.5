@@ -21,11 +21,13 @@ jokeOutput:string;
         this.jokeOutput = txt.joke
       }
     )
+
   }
 
   saveToArry(){
     let idx = this.jokeOutput
     this.favArry.saveInput(idx)
+    this.favArry.storedArrySet
   }
 
 }

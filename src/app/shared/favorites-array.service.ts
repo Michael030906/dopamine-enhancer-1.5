@@ -5,7 +5,7 @@ import { MomJokesComponent } from '../mom-jokes/mom-jokes.component';
   providedIn: 'root'
 })
 export class FavoritesArrayService {
-  mainArry:any =new Array();
+  mainArry =new Array();
 
   storedArrySet = localStorage.setItem("mainArray", JSON.stringify(this.mainArry))
 
@@ -34,7 +34,7 @@ export class FavoritesArrayService {
     }
     return;
   }
-  constructor() { }
+  constructor() {}
 
   deletePostFromForum(idx:number){
     if (idx === -1) return;
