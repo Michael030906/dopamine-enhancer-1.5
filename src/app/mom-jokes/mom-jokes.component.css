@@ -2,3 +2,11 @@
   background-color: brown;
 }
 
+.favBtn{
+  background: transparent;
+  color: red;
+  border: none;
+}
+.jokeOutput{
+  font-size: x-large;
+}

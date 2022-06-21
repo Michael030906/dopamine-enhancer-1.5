@@ -13,6 +13,7 @@ jokeOutput:string;
 
   ngOnInit(): void {
     this.apiRandomCall()
+
   }
 
   apiRandomCall(){
@@ -27,7 +28,6 @@ jokeOutput:string;
   saveToArry(){
     let idx = this.jokeOutput
     this.favArry.saveInput(idx)
-    this.favArry.storedArrySet
   }
 
 }

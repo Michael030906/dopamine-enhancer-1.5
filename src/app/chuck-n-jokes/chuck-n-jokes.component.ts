@@ -25,8 +25,8 @@ export class ChuckNJokesComponent implements OnInit {
   }
 
 
-  saveToArry(){
-    let idx = this.jokeOutput
+  saveToArry(idx){
+    this.favArry.saveInput(idx)
     this.favArry.saveInput(idx)
   }
 }

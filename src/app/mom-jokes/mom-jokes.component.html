@@ -1,7 +1,19 @@
 <div class="container">
   <div class="row">
-    <p>{{ jokeOutput }}</p>
-    <button (click)="saveToArry()">X</button>
+    <div class="col-md-10 jokeOutput">
+      <p>{{ jokeOutput }}</p>
+    </div>
+    <div class="col-md-2">
+      <!-- <button (click)="saveToArry(jokeOutput)">X</button> -->
+      <button
+        mat-icon-button
+        color="accent"
+        (click)="saveToArry(jokeOutput)"
+        class="favBtn"
+      >
+        <mat-icon>favorite</mat-icon>
+      </button>
+    </div>
   </div>
   <button class="btn chuckBtn" (click)="genArryCall()">Mom Jokes!</button>
 

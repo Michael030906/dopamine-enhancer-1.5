@@ -11,18 +11,16 @@ export class FavoritesComponent implements OnInit {
   constructor(private favList:FavoritesArrayService) { }
 
   ngOnInit(): void {
+    this.favList.callStorage()
     this.arryCall()
-    this.txtOutput = JSON.parse(localStorage.getItem("mainArray"))
-    console.log(this.txtOutput)
   }
 
   arryCall(){
+    this.favList.callStorage()
     this.txtOutput = this.favList.mainArry
-    this.favList.storedArrySet
-    console.log(this.txtOutput)
   }
 
-  onRemove(idx:number){
-    this.favList.deletePostFromForum(idx)
+  deleteFavJoke(idx){
+    this.favList.deleteFavJoke(idx)
   }
 }

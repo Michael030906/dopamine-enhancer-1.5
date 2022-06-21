@@ -19,6 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputFormComponent } from './forums/input-form/input-form.component';
 import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
 import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -27,6 +30,7 @@ import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
     NavbarComponent,
     MomJokesComponent,
     HomeComponent,
+    DadJokesComponent,
     FavoritesComponent,
     FavDadJokesComponent,
     FavMomJokesComponent,
@@ -43,7 +47,10 @@ import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

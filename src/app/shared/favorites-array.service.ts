@@ -1,24 +1,31 @@
 import { Injectable } from '@angular/core';
-import { MomJokesComponent } from '../mom-jokes/mom-jokes.component';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FavoritesArrayService {
-  mainArry =new Array();
+  constructor() { }
 
-  storedArrySet = localStorage.setItem("mainArray", JSON.stringify(this.mainArry))
+  mainArry = [];
+
+
+
 
   storedArryGet = JSON.parse(localStorage.getItem("mainArray"))
 
 
+  callStorage(){
+    this.mainArry = this.storedArryGet
+  }
 
   saveInput(idx) {
-    if (this.mainArry.length === 0) {
-      this.storedArrySet
-      this.storedArryGet
+    if(this.mainArry.length === 0) {
+      localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
       this.mainArry.push(idx);
-    }
+
+      return
+    }else{
     let clear = true;
     this.mainArry.forEach((i) => {
       if (i === idx) {
@@ -26,19 +33,20 @@ export class FavoritesArrayService {
       }
     });
     if (clear) {
-      this.storedArrySet
-      this.storedArryGet
       this.mainArry.push(idx);
-    } else {
+      return
+      } else {
        console.log('You already liked that Joke!')
-    }
-    return;
-  }
-  constructor() {}
 
-  deletePostFromForum(idx:number){
-    if (idx === -1) return;
-
-    this.mainArry.splice(idx, 1);
+      }}
+    localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
+    return
   }
+
+ deleteFavJoke(idx){
+   this.mainArry.splice(idx,1)
+   localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
+   return
+ }
 }
+
