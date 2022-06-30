@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
 import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
 import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 import { FavoritesComponent } from './favorites/favorites.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
 {path:'chuck-norris-jokes', component:ChuckNJokesComponent},
 {path:'DadJokes', component:DadJokesComponent},
 {path:'Favorites', component:FavoritesComponent},
+{path:'auth-page', component:AuthComponent}
 
 
 ];

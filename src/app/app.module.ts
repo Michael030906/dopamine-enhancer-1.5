@@ -22,6 +22,7 @@ import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
+import { AuthComponent } from './auth/auth.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {MatIconModule} from '@angular/material/icon';
     ForumsDetailsComponent,
     ContentComponent,
     InputFormComponent,
-    ChuckNJokesComponent
+    ChuckNJokesComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
