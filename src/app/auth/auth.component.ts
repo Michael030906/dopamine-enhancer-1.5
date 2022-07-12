@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { HomeComponent } from '../home/home.component';
 import { AuthResponseData, AuthService } from './auth.service';
 
 @Component({
@@ -13,7 +15,7 @@ export class AuthComponent implements OnInit {
   isLoading = false;
   error:string = null;
 
-  constructor(private AuthService: AuthService) { }
+  constructor(private AuthService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -38,6 +40,7 @@ export class AuthComponent implements OnInit {
     authObs.subscribe(resData =>{
       console.log(resData)
       this.isLoading = false
+      this.router.navigate(['/home'])
     },
     errorMessage => {
       console.log(errorMessage)
