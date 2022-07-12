@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "gh-pages": "gh-pages -d dist/dopamine-enhancer-1.5",
-    "deploy": "ng build --prod --base-href=https://Michael030906.github.io/dopamine-enhancer-1.5/"
+    "deploy": "ng build --prod --base-href=https://Michael030906.github.io/dopamine-enhancer-1.5/",
+    "heroku-postbuild": "npm run build"
   },
   "private": true,
   "dependencies": {
