@@ -1,40 +1,50 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-10 jokeOutput">
-      <p>{{ jokeOutput }}</p>
+<div class="container-squared">
+  <div class="container" style="height: 500px">
+    <div class="row" style="height: 100px">
+      <div class="col-md-12 heart">
+        <!-- <button (click)="saveToArry(jokeOutput)">X</button> -->
+        <button
+          mat-icon-button
+          color="accent"
+          (click)="saveToArry(jokeOutput)"
+          class="favBtn"
+        >
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
     </div>
-    <div class="col-md-2">
-      <!-- <button (click)="saveToArry(jokeOutput)">X</button> -->
-      <button
-        mat-icon-button
-        color="accent"
-        (click)="saveToArry(jokeOutput)"
-        class="favBtn"
-      >
-        <mat-icon>favorite</mat-icon>
+    <div class="row thejokerow" style="height: 300px">
+      <div class="col-md-10 jokeOutput">
+        <p>{{ jokeOutput }}</p>
+      </div>
+    </div>
+    <div class="row buttonholder" style="height: 100px">
+      <div class="dropdown">
+        <button
+          class="btn dropdown-toggle joke-selector"
+          type="button"
+          id="dropdownMenuButton"
+          data-toggle="dropdown"
+          aria-expanded="true"
+        >
+          {{ this.dropdownLabel() }}
+        </button>
+
+        <div
+          class="dropdown-menu joke-selector2"
+          aria-labelledby="dropdownMenuButton"
+        >
+          <a
+            *ngFor="let action of actions"
+            class="dropdown-item joke-selector2"
+            (click)="jokeTypeClick(action.name)"
+            >{{ action.name }}</a
+          >
+        </div>
+      </div>
+      <button class="btn chuckBtn" style="height: 40px" (click)="genArryCall()">
+        Mom Jokes!
       </button>
-    </div>
-  </div>
-  <button class="btn chuckBtn" (click)="genArryCall()">Mom Jokes!</button>
-
-  <div class="dropdown">
-    <button
-      class="btn btn-secondary dropdown-toggle"
-      type="button"
-      id="dropdownMenuButton"
-      data-toggle="dropdown"
-      aria-expanded="true"
-    >
-      {{ this.dropdownLabel() }}
-    </button>
-
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a
-        *ngFor="let action of actions"
-        class="dropdown-item"
-        (click)="jokeTypeClick(action.name)"
-        >{{ action.name }}</a
-      >
     </div>
   </div>
 </div>

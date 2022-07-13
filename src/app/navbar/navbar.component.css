@@ -1,5 +1,5 @@
 .nav-main{
-  background-color:#161716;
+  background-color:#121212;
 
 
 }
@@ -7,14 +7,33 @@
 .nav-title{
   padding-top: 10px;
   font-size: 25px;
+  color:#F05454;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: space-evenly;
 }
-p{
+/* p{
   color:#87aa8f;
   padding-top: 14.5px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   display: flex;
   align-items: space-evenly;
   font-size: 20px;
+} */
+.nav-text{
+  color:rgb(225, 83, 83);
+  padding-top: 14.5px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: space-evenly;
+  font-size: 20px;
 }
+
+.nav-item {
+padding-left: 25px;
+padding-right: 25px;
+}
+
+
 
 

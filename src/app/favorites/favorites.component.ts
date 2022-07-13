@@ -17,7 +17,6 @@ export class FavoritesComponent implements OnInit {
 
   arryCall(){
     this.txtOutput = this.favList.mainArry
-    console.log(this.txtOutput)
   }
 
   deleteFavJoke(idx){

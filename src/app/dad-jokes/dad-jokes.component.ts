@@ -28,7 +28,6 @@ jokeOutput:string;
   saveToArry(idx){
     this.favArry.saveInput(idx)
     this.favArry.saveInput(idx)
-    console.log(this.favArry.mainArry)
   }
 
 }

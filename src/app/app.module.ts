@@ -11,12 +11,12 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { FavDadJokesComponent} from './favorites/fav-dad-jokes/fav-dad-jokes.component';
 import { FavMomJokesComponent } from './favorites/fav-mom-jokes/fav-mom-jokes.component';
 import { FavWholesomeComponent } from './favorites/fav-wholesome/fav-wholesome.component';
-import { ForumsComponent } from './forums/forums.component';
-import { ForumsListComponent } from './forums/forums-list/forums-list.component';
-import { ForumsDetailsComponent } from './forums/forums-details/forums-details.component';
-import { ContentComponent } from './shared/content/content.component';
+
+
+
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InputFormComponent } from './forums/input-form/input-form.component';
+
 import { ChuckNJokesComponent } from './chuck-n-jokes/chuck-n-jokes.component';
 import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,14 +37,10 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
     FavDadJokesComponent,
     FavMomJokesComponent,
     FavWholesomeComponent,
-    ForumsComponent,
-    ForumsListComponent,
-    ForumsDetailsComponent,
-    ContentComponent,
-    InputFormComponent,
     ChuckNJokesComponent,
     AuthComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+
   ],
   imports: [
     BrowserModule,

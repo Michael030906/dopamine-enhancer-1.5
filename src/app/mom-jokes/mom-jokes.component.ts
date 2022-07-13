@@ -63,10 +63,8 @@ export class MomJokesComponent implements OnInit {
   }
 
   saveToArry(idx){
-    console.log(idx)
     this.favArry.saveInput(idx)
     this.favArry.saveInput(idx)
-    console.log(this.favArry.mainArry)
   }
 }
 
