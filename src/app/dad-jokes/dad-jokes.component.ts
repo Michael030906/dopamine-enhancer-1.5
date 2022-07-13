@@ -25,9 +25,10 @@ jokeOutput:string;
 
   }
 
-  saveToArry(){
-    let idx = this.jokeOutput
+  saveToArry(idx){
     this.favArry.saveInput(idx)
+    this.favArry.saveInput(idx)
+    console.log(this.favArry.mainArry)
   }
 
 }

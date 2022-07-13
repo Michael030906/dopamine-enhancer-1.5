@@ -1,5 +1,7 @@
 <div class="row">
   <p>{{ jokeOutput }}</p>
-  <button (click)="saveToArry()">X</button>
+  <div>
+    <a (click)="saveToArry(jokeOutput)">X</a>
+  </div>
 </div>
 <button (click)="apiRandomCall()">click me</button>

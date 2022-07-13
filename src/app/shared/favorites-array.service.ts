@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class FavoritesArrayService {
   constructor() { }
 
-  mainArry:string[];
+  mainArry:string[] = [];
 
 
 
@@ -22,9 +22,9 @@ export class FavoritesArrayService {
 
   saveInput(idx) {
     if(this.mainArry.length === 0) {
-      localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
+      // localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
       this.mainArry.push(idx);
-      console.log(idx)
+      this.callStorage();
       return
     }else{
     let clear = true;

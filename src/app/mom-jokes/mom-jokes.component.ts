@@ -35,7 +35,7 @@ export class MomJokesComponent implements OnInit {
   constructor(private jokeA: JokeArrayService, private favArry:FavoritesArrayService) { }
 
   ngOnInit(): void {
-   this.favArry.callStorage()
+  //  this.favArry.callStorage()
    this.genArryCall()
   }
 

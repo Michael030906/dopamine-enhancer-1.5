@@ -11,13 +11,13 @@ export class FavoritesComponent implements OnInit {
   constructor(private favList:FavoritesArrayService) { }
 
   ngOnInit(): void {
-    this.favList.callStorage()
+    this.favList.callStorage();
     this.arryCall()
   }
 
   arryCall(){
-    this.favList.callStorage()
     this.txtOutput = this.favList.mainArry
+    console.log(this.txtOutput)
   }
 
   deleteFavJoke(idx){
