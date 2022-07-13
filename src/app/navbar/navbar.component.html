@@ -3,6 +3,7 @@
     class="navbar-brand nav-title"
     routerLink="/home"
     routerLinkActive="active"
+    style="cursor: pointer"
   >
     Dopamine Enhancer
   </p>
@@ -16,6 +17,7 @@
               class="nav-link forums"
               routerLink="/forums"
               routerLinkActive="active"
+              style="cursor: pointer"
             >
               Forums
             </p>
@@ -25,6 +27,7 @@
               class="nav-link mom-jokes"
               routerLink="/MomJokes"
               routerLinkActive="active"
+              style="cursor: pointer"
             >
               Yo Momma Jokes
             </p>
@@ -34,6 +37,7 @@
               class="nav-link chuckJ"
               routerLink="/chuck-norris-jokes"
               routerLinkActive="active"
+              style="cursor: pointer"
             >
               Chuck Facts
             </p>
@@ -43,6 +47,7 @@
               class="nav-link rdad"
               routerLink="/DadJokes"
               routerLinkActive="active"
+              style="cursor: pointer"
             >
               Dad Jokes
             </p>
@@ -52,6 +57,8 @@
               class="nav-link favorites"
               routerLink="/Favorites"
               routerLinkActive="active"
+              style="cursor: pointer"
+              *ngIf="isAuththenticated"
             >
               Favorites
             </p>
@@ -61,9 +68,14 @@
               class="nav-link auth"
               routerLink="/auth-page"
               routerLinkActive="active"
+              style="cursor: pointer"
+              *ngIf="!isAuththenticated"
             >
               Sign Up!
             </p>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="isAuththenticated" style="cursor: pointer">Logout</a>
           </li>
         </ul>
       </div>
