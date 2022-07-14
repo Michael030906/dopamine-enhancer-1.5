@@ -1,5 +1,5 @@
 .video{
-  padding-top: 50px;
+  padding-top: 3em;
   display: flex;
   align-content: center;
 
@@ -13,7 +13,7 @@ video{
   width: 100%;
   object-fit: contain;
   display: flex;
-
 }
+
 
 

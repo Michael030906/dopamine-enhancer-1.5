@@ -1,7 +1,5 @@
 .nav-main{
   background-color:#121212;
-
-
 }
 
 .nav-title{
@@ -12,14 +10,7 @@
   display: flex;
   align-items: space-evenly;
 }
-/* p{
-  color:#87aa8f;
-  padding-top: 14.5px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  display: flex;
-  align-items: space-evenly;
-  font-size: 20px;
-} */
+
 .nav-text{
   color:rgb(225, 83, 83);
   padding-top: 14.5px;

@@ -1,6 +1,5 @@
 <div class="container mainC" style="height: 100%">
   <div class="col-md-12">
-    <!-- <div class="ic-sticky-frame has-scrollbar"> -->
     <div class="scroll">
       <div class="row" *ngFor="let fav of txtOutput; let i = index">
         <div class="favej">
@@ -15,19 +14,13 @@
           >
             {{ fav }}
           </p>
-          <!-- <button
-            class="col-xs-2 xbutton"
-            style="max-height: 30px"
-            (click)="deleteFavJoke(i)"
-          >
-            X
-          </button> -->
           <div class="example-button-container">
             <button
               mat-fab
               color="primary"
               aria-label="delete-icon"
               class="delete-btn"
+              (click)="deleteFavJoke(i)"
             >
               <mat-icon>delete</mat-icon>
             </button>

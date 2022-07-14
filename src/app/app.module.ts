@@ -8,9 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MomJokesComponent } from './mom-jokes/mom-jokes.component';
 import { HomeComponent } from './home/home.component';
 import { FavoritesComponent } from './favorites/favorites.component';
-import { FavDadJokesComponent} from './favorites/fav-dad-jokes/fav-dad-jokes.component';
-import { FavMomJokesComponent } from './favorites/fav-mom-jokes/fav-mom-jokes.component';
-import { FavWholesomeComponent } from './favorites/fav-wholesome/fav-wholesome.component';
+
 
 
 
@@ -22,8 +20,7 @@ import { DadJokesComponent } from './dad-jokes/dad-jokes.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
-import { AuthComponent } from './auth/auth.component';
-import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+
 
 
 @NgModule({
@@ -34,12 +31,8 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
     HomeComponent,
     DadJokesComponent,
     FavoritesComponent,
-    FavDadJokesComponent,
-    FavMomJokesComponent,
-    FavWholesomeComponent,
     ChuckNJokesComponent,
-    AuthComponent,
-    LoadingSpinnerComponent,
+
 
   ],
   imports: [

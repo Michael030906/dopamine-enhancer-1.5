@@ -22,7 +22,6 @@ export class FavoritesArrayService {
 
   saveInput(idx) {
     if(this.mainArry.length === 0) {
-      // localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
       this.mainArry.push(idx);
       this.callStorage();
       return
