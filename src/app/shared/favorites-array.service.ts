@@ -9,16 +9,16 @@ export class FavoritesArrayService {
 
   mainArry:string[] = [];
 
-
-
-
   storedArryGet = JSON.parse(localStorage.getItem("mainArray"))
 
-
   callStorage(){
+    if(this.storedArryGet === null){
+      this.mainArry == [];
+      localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
+    }else{
     this.mainArry = this.storedArryGet
     localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
-  }
+    }}
 
   saveInput(idx) {
     if(this.mainArry.length === 0) {
@@ -30,14 +30,12 @@ export class FavoritesArrayService {
     this.mainArry.forEach((i) => {
       if (i === idx) {
         clear = false;
-      }
-    });
+      }});
     if (clear) {
       this.mainArry.push(idx);
       return
       } else {
-       console.log('You already liked that Joke!')
-
+        console.log("Joke Saved")
       }}
     localStorage.setItem("mainArray",JSON.stringify(this.mainArry))
     return

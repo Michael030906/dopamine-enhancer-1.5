@@ -40,11 +40,11 @@ export class MomJokesComponent implements OnInit {
 
   genArryCall(): void {
     if (this.jokeType === 'Random' || this.jokeType === '') {
-      var randomNum = Math.floor(Math.random() * (this.jokeA.arrayUS?.length + 1));
+      let randomNum = Math.floor(Math.random() * (this.jokeA.arrayUS?.length + 1));
       this.jokeOutput = this.jokeA.arrayUS[randomNum]
     } else {
-      var array = this.jokeA.array[this.jokeType]
-      var randomNum = Math.floor(Math.random() * (array?.length + 1));
+      let array = this.jokeA.array[this.jokeType]
+      let randomNum = Math.floor(Math.random() * (array?.length + 1));
       this.jokeOutput = array === undefined ? '' : array[randomNum]
     }
   }

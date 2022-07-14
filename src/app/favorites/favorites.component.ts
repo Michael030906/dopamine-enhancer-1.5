@@ -8,6 +8,7 @@ import { FavoritesArrayService } from '../shared/favorites-array.service';
 })
 export class FavoritesComponent implements OnInit {
   txtOutput;
+
   constructor(private favList:FavoritesArrayService) { }
 
   ngOnInit(): void {

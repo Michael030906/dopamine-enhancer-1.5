@@ -8,12 +8,12 @@ import { DadApiService } from './dad-api.service';
   styleUrls: ['./dad-jokes.component.css']
 })
 export class DadJokesComponent implements OnInit {
-jokeOutput:string;
+  jokeOutput:string;
+
   constructor(private apiService:DadApiService, private favArry: FavoritesArrayService) { }
 
   ngOnInit(): void {
     this.apiRandomCall()
-
   }
 
   apiRandomCall(){
@@ -22,12 +22,10 @@ jokeOutput:string;
         this.jokeOutput = txt.joke
       }
     )
-
   }
 
   saveToArry(idx){
     this.favArry.saveInput(idx)
     this.favArry.saveInput(idx)
   }
-
 }
