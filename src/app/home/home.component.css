@@ -1,3 +1,10 @@
+.video{
+  padding-top: 50px;
+  display: flex;
+  align-content: center;
+
+}
+
 video{
   border: 2px transparent;
   box-shadow: 12px 8px 18px 5px rgba(0,0,0,0.6);
@@ -5,4 +12,8 @@ video{
   height: 100%;
   width: 100%;
   object-fit: contain;
+  display: flex;
+
 }
+
+

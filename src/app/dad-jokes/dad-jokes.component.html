@@ -1,7 +1,30 @@
-<div class="row">
-  <p>{{ jokeOutput }}</p>
-  <div>
-    <a (click)="saveToArry(jokeOutput)">X</a>
+<div class="container-squared">
+  <div class="container" style="height: 500px">
+    <div class="row" style="height: 100px">
+      <div class="col-md-12 heart">
+        <button
+          mat-icon-button
+          color="accent"
+          (click)="saveToArry(jokeOutput)"
+          class="favBtn"
+        >
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="row thejokerow" style="height: 300px">
+      <div class="col-md-10 jokeOutput">
+        <p>{{ jokeOutput }}</p>
+      </div>
+    </div>
+    <div class="row buttonholder" style="height: 100px">
+      <button
+        class="btn chuckBtn"
+        (click)="apiRandomCall()"
+        style="height: 40px"
+      >
+        Click Me!!
+      </button>
+    </div>
   </div>
 </div>
-<button (click)="apiRandomCall()">click me</button>

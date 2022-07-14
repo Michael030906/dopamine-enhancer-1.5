@@ -1,7 +1,58 @@
-.chuckJ {
-color:black;
-text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-border-color: white;
-font-size: 35px;
+.container-squared{
+  padding-top: 10%;
 }
+
+.container{
+  border: 3px solid #F05454;
+  border-radius: 5px;
+  background-color: #121212;
+}
+.chuckBtn {
+  background-color: #30475E;
+  border-radius: 5px;
+  color: grey;
+
+}
+
+.chuckBtn:hover{
+  color: #F5F5F5;
+  text-shadow: 0 0 3px #F05454, 0 0 5px #DCD7C9;
+}
+
+.heart{
+  display: flex;
+  justify-content: right;
+}
+
+.favBtn{
+  transform: scale(1.6);
+  background: transparent;
+  color: #F05454;
+  border: none;
+}
+
+.favBtn:hover{
+  color: #30475E;
+}
+
+.jokeOutput{
+  color: #F5F5F5;
+  font-size: x-large;
+  padding-top: 1%;
+  border-radius: 5px;
+  text-shadow: 0 0 3px #F05454, 0 0 5px #DCD7C9;
+}
+
+.buttonholder{
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  }
+
+.thejokerow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2.5em;
+  }
 

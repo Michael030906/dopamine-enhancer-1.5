@@ -1,19 +1,19 @@
-.background{
-  color: #A27B5C;
-}
+
 .container-squared{
   padding-top: 10%;
-
 }
 
 .container{
-  border: solid black 5px;
+  border: 3px solid #F05454;
   border-radius: 5px;
   background-color: #121212;
 }
 
 .chuckBtn {
+  font-weight: bold;
+  color: grey;
   background-color: #30475E;
+  border-radius: 5px;
 }
 
 .chuckBtn:hover{
@@ -33,12 +33,15 @@
   border: none;
 }
 
+.favBtn:hover{
+  color: #30475E;
+}
+
 .jokeOutput{
   color: #F5F5F5;
   font-size: x-large;
   padding-top: 1%;
   border-radius: 5px;
-  /* text-decoration: #2C3639; */
   text-shadow: 0 0 3px #F05454, 0 0 5px #DCD7C9;
 }
 
@@ -52,10 +55,13 @@ padding: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 2.5em;
 }
 
 .joke-selector{
   background-color: #30475E;
+  font-weight: bold;
+  color: grey;
 }
 .joke-selector:hover{
   color: #F5F5F5;
